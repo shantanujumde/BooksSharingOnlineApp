@@ -1,0 +1,26 @@
+<hr />
+<h4 class="text-center" style="margin-top: -8px">Your Cart</h4>
+<hr />
+<div class="row card-group">
+  <div class="col-3" *ngFor="let cart of carts">
+    <div class="card">
+      <img
+        height="150px"
+        src="{{ book.frontPageUrl }}"
+        class="card-img-top rounded-1"
+        alt="product-img"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ book.bookName }}</h5>
+        <p class="card-text">Author :{{ book.authorName }}</p>
+        <button
+          mat-raised-button
+          (click)="BookInfo(book)"
+          class="btn btn-primary"
+        >
+          buy
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
