@@ -2,7 +2,7 @@
 <h4 class="text-center" style="margin-top: -8px">Your Cart</h4>
 <hr />
 <div class="row card-group">
-  <div class="col-3" *ngFor="let cart of carts">
+  <div class="col-3" *ngFor="let book of booksOwned">
     <div class="card">
       <img
         height="150px"
@@ -12,15 +12,17 @@
       />
       <div class="card-body">
         <h5 class="card-title">{{ book.bookName }}</h5>
-        <p class="card-text">Author :{{ book.authorName }}</p>
-        <button
+        <p class="card-text">Author :{{ book.bookName }}</p>
+        <!-- <button
           mat-raised-button
           (click)="BookInfo(book)"
           class="btn btn-primary"
         >
           buy
-        </button>
+        </button> -->
       </div>
     </div>
   </div>
 </div>
+
+<button id="" class="btn btn-info mt-5">Checkout</button>
